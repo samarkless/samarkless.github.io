@@ -51,3 +51,24 @@ table {
 a:hover {
 	color:red;
 }
+
+.turn-blue:hover{
+  color: blue;
+}
+
+@font-face {
+    font-family: 'Montez';
+    src: url('font/Montez-webfont.eot');
+    src: url('font/Montez-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Montez-webfont.woff') format('woff'),
+         url('font/Montez-webfont.ttf') format('truetype'),
+         url('font/Montez-webfont.svg#Montez') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+
+  	font-family: 'Montez';
+  }
+  }
