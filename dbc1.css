@@ -1,0 +1,22 @@
+h1 p {
+
+	color: blue;
+	background-color: #fc0000;
+	font-family: Verdana;
+}
+
+h2 p {
+
+	background-color: red;
+	font-family: Cursive;
+}
+
+.red {
+	color:red;
+}
+
+#worst {
+	color:yellow;
+	font-weight: bold;
+	font-family: cursive;
+}
