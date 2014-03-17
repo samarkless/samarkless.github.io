@@ -129,3 +129,14 @@ h3 {
 	font-size: 50px;
 	text-align: center;
 }
+
+h3 strong {
+
+	text-align: center;
+	font-size: 500px;
+}
+
+p #name {
+	text-align: center;
+	font-size: 500px;
+}
