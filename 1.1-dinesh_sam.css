@@ -1,0 +1,30 @@
+
+      /* temporarily add styles here then move to css file at the end */
+      h1 {
+       text-align:center;
+       font-family:Verdana;
+       color:red;
+      }
+      #sam{
+          float:right;
+          width:45%;
+      }
+      #dinesh{
+          float:left;
+          width:45%;
+      }
+      div {
+          margin:5px;
+      }
+      
+      .email {
+          text-align:center;
+          clear:both;
+      }
+      
+      #pic {
+          clear:both;
+          width:100%;
+          
+      }
+      
