@@ -14,50 +14,104 @@ var terah = {
 }
 
 /* Pseudocode Section - write pseudocode for each challenge below.
+
 1. Define a variable adam and use object literal notation to assign this variable 
-   the value of a JavaScript Object object with no properties.
+the value of a JavaScript Object object with no properties.
+
+defined and added the variable adam 
+got "Error: the value of the adam name property should be 'Adam'
+moving on to next step.
 
 2. Give adam a name property with the value "Adam".
 
+Added a name property to adam and gave it the value 'Adam'
+got "ERROR: terah should have a spouse property with the value of the variable adam"
+moving on to next step.
+
 3. Add a spouse property to terah and assign it the value of adam.
+
+Added spouse property to terah with the value of adam. 
+got "ERROR: the terah weight property should be 125
+moving on to next step
 
 4. Change the value of the terah weight property to 125.
 
+Added a weight property to terah and made the value 125
+got "ERROR: the terah eyeColor property should be removed. "
+moving on to next step
+
 5. Remove the eyeColor property from terah.
 
+Deleted the eyeColor property from terah
+got "ERROR: the terah spouse property's value spouse property should be terah"
+moving on to next step
+
 6. Add a spouse property to adam and assign it the value of terah.
+
+added a spouse property to adam and gave it a value equal to terah 
+got "ERROR: the value of the terah children property should be an Object"
+moving on to next step
 
 7. Add a children property to terah and and use object literal notation to assign 
    this variable the value of a JavaScript Object object with no properties
 
+added a children property to terah with the value of an object with no properties
+got "TypeError: cannot read property 'name' of undefined"
+moving on to next step
+
 8. Add a carson property to the value of the terah children property and assign it 
   the value of an object with the property name with a value of "Carson".
+
+added carson property to value of terah children property
+got "TypeError: cannot read property 'name' of undefined"
+moving on to next step
 
 9. Add a carter property to the value of the terah children property and assign it 
    the value of an object with the property name with a value of "Carter".
 
+added carter property to value of terah children property
+got "TypeError: cannot read property 'name' of undefined"
+moving on to next step
+
 10. Add a colton property to the value of the terah children property and assign it 
     the value of an object with the property name with a value of "Colton".
 
+added colton property to value of terah children property
+got "ERROR: the value of the adam children property shold be the value of the terah children property"
+moving on to next step
+
 11. Add a children property to adam and assign it the value of terah children.
 
+made the children property in adam equal to the value of terah children.
+challenge complete.
 
 */
 
 // __________________________________________
 // Write your code below.
 
-
-
-
-
-
+var adam = {};
+adam.name = "Adam";
+terah.spouse = adam;
+terah.weight = 125;
+delete terah.eyeColor;
+adam.spouse = terah;
+terah.children = {};
+terah.children.carson = {name: "Carson"};
+terah.children.carter = {name: "Carter"};
+terah.children.colton = {name: "Colton"};
+adam.children = terah.children;
 
 
 // __________________________________________
 // Reflection: Use the reflection guidelines
 // 
-// 
+// This challenge tested defining local variables in javascript and learning how to manipulate javascript 
+// Objects. Furthermore, it presented another chance to get used to developing and testing your code
+// while using the command line and sublime text editor. I had to look back at some tutorials
+// to remember the delete function in order to remove the eyeColor property from terah.
+// I felt like this challenge was a good revision for object literal notation as well.
+// All in all im quite confident with the learning objectives but they may require further revision.
 // 
 // 
 // 
