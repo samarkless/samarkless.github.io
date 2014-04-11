@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="week5_technical.css"/>
+    <title>Title Here</title>
+
+  </head>
+
+  <body>
+
+<h1>Being the Teacher!</h1>
+    <h3>Lets create a program using ruby classes!</h3>
+    <p>Hi students! today we will be going over the creation of a program using ruby classes!</p>
+    <p>Ruby, in all of its greatness, can allow you to create any kind of object you want! In our example today we will be
+        creating a class called "Computer", which will generate instances of that class
+        which can then act to manipulate its own imaginary files.</p>
+
+    <p> Firstly, we should create a class called "Computer", and give it an initialize method that takes no parameters. The
+        body of initialize itself, should be empty. It should look something like this:</p>
+    <p>  class Computer <br>
+             def initialize<br>
+             end<br>
+         end
+   </p> 
+   
+   <p>Next, we should be passing our initialize method some parameters and setting up a few instance variables.
+   Here we update our initialize method to take 2 parameters, username and password. In initialize, set the instance variables to @username and @password.In our initialize method we also want to add another instance variable, @files, which is equal to an empty hash. This will act to 
+   keep track of our files later on. The code should look like this:
+   </p>
+   
+   <p>  class Computer <br>
+            def initialize (username, password) <br>
+                @username = username <br>
+                @password = password<br>
+                @files = {}<br>
+    end<br>
+end
+   </p> 
+   
+   <p>Now, let's introduce some class variables into the mix! We will be using @@users to keep track of the users on our computer.
+   Add a new class variable to our computer class called @@users, it should equal an empty hash.
+   Next, in the initialize method, set @@users[username] equal to password, so that our @@users hash keeps usernames as keys with each username's password
+   as the associated value. Your code should look like this:
+    </p>
+    <p>
+       class Computer<br>  
+    @@users = {}<br>
+    def initialize (username, password)<br>
+        @username = username<br>
+        @password = password<br>
+        @files = {}<br>
+        @@users[username] = password<br>
+    end<br>
+end
+    </p>
+    <p> Now let's add another method, create. Inside our Computer class, define a method called create, with a single
+    parameter, filename. Inside create, declare a variable called time and set it equal to the current time, this is done by using Time.now.
+    Inside create, add a new key:value pair to @files hash. Use the filename key to store the value time. Finally, use puts to return a message telling the user
+    that a new file was created. Your code should look something like this:
+    </p>
+    <p>
+        class Computer  <br>
+    @@users = {}<br>
+    def initialize (username, password)<br>
+        @username = username<br>
+        @password = password<br>
+        @files = {}<br>
+        @@users[username] = password<br>
+    end<br>
+    
+    def create (filename)<br>
+        time = Time.now<br>
+        @files[filename] = time <br>
+        puts "#{filename} was created by #{@username} at #{time}"<br>
+    end<br>
+end
+    </p>
+    
+    <p>Almost done guys! We need to now find a way to get to our @@users class variable! We will need to create a method to reach it. 
+    because @@users is a class variable, we can use a class method to get it. Most of the methods used to far have been instance variables, which work on specific instances/objects. A class method
+    belongs to the class itself. Add a new class method to your Computer class called Computer.get_users, taking no parameters. This new method should return the @@users class variable and puts a message!.
+    Your code should look like this:</p>
+        
+    <p>class Computer <br>  
+    @@users = {}<br> 
+    def initialize (username, password)<br> 
+        @username = username<br> 
+        @password = password<br> 
+        @files = {}<br> 
+        @@users[username] = password<br> 
+    end<br> 
+    
+    def create (filename)<br> 
+        time = Time.now<br> 
+        @files[filename] = time <br> 
+        puts "new file has been created!"<br> 
+    end<br> 
+    
+    def Computer.get_users<br> 
+        @@users<br> 
+        puts "Let's get those users for you!"<br> 
+    end<br> 
+end
+</p>
+    
+    <p> Last part! Were going to create an instance of our Computer class, this will help us test our code! After your
+    class, create a new instance of Computer, store it in a variable called my_computer. You can input any username and password you like for your
+    arguments! You can also ask the Computer to create a new text document! Your code should look something like this:
+    </p>
+    
+    <p> class Computer  <br>
+    @@users = {}<br>
+    def initialize (username, password)<br>
+        @username = username<br>
+        @password = password<br>
+        @files = {}<br>
+        @@users[username] = password<br>
+    end<br>
+    
+    def create (filename)<br>
+        time = Time.now<br>
+        @files[filename] = time <br>
+        puts "new file has been created!"<br>
+    end<br>
+    
+    def Computer.get_users<br>
+        @@users<br>
+    end<br>
+end<br>
+
+my_computer = Computer.new("username", "password")
+my_computer.create("classproject.txt")<br>
+puts "users: #{Computer.get_users}"
+
+
+
+    </p>
+    
+   </body>   
+</html>
